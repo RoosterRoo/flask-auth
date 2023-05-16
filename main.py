@@ -81,7 +81,7 @@ def secrets():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('home'), logged_in=current_user.is_authenticated)
+    return redirect(url_for('home', logged_in=current_user.is_authenticated))
 
 
 @app.route('/download')
